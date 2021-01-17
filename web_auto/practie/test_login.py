@@ -10,3 +10,7 @@ class TestClick():
     def test_baidu(self):
         self.driver.find_element_by_xpath('//*[@id="kw"]').send_keys("selenium")
         self.driver.find_element_by_css_selector('#su').click()
+        self.driver.save_screenshot("./result/1.png")
+
+
+ 

@@ -22,12 +22,13 @@ class TestWx():
     #     pass
 
     def test_getcookie(self):
+        # self.driver.get("https://work.weixin.qq.com")
         # cookies=self.driver.get_cookies()
         # with open("cookie.json","w")as f:
         #     json.dump(cookies,f)
 
         self.driver.get("https://work.weixin.qq.com")
-        with open("cookie.json","r") as f:
+        with open("cookie.json", "r") as f:
             cookies=json.load(f)
         for cookie in cookies:
             self.driver.add_cookie(cookie)
