@@ -1,0 +1,8 @@
+goto_search:
+  - action : click
+    locator : [xpath,"//*[@resource-id='com.xueqiu.android:id/action_search']"]
+  - action : sendKeys
+    locator : [xpath,"//*[@resource-id='com.xueqiu.android:id/search_input_text']"]
+    text : ["alibaba"]
+
+

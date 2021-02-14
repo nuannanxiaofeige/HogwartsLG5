@@ -1,0 +1,7 @@
+add:
+  - ['alibba']
+  - ['香港']
+
+delet:
+  - [ 'alibba' ]
+  - [ '香港' ]
