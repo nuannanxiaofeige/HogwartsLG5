@@ -24,10 +24,10 @@ class Test_AddDepartment():
     def test_add_department_success(self):
         res=self.main.goto_contact_page().add_department_success(success_name).get_list()
         assert success_name in res
-    #
-    def test_add_department_fail(self):
-        res=self.main.goto_contact_page().add_department_fail(fail_name).get_list()
-        assert res.count(fail_name) == 1
-
+    # #
+    # def test_add_department_fail(self):
+    #     res=self.main.goto_contact_page().add_department_fail(fail_name).get_list()
+#     #     assert res.count(fail_name) == 1
+#
 if __name__ =='__main__':
     pytest.main(['test_add_department.py','-sq'])

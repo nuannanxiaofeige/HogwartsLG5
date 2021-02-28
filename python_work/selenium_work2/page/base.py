@@ -42,3 +42,13 @@ class Base():
     def sendKeys(self, locator, text):
         a = self.findElement(locator)
         a.send_keys(text)
+
+
+    def get_text(self,locator):
+        '''获取文本'''
+        try:
+            t = self.findElement(locator).text
+            return t
+        except:
+            print("获取文本失败，返回' '")
+            return " "

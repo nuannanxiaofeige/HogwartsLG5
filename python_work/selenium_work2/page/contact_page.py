@@ -11,7 +11,7 @@ _loc_name=("xpath",'//*[@class="member_tag_dialog_inputDlg"]/form[1]/div[1]/inpu
 _loc_affiliated_section=("xpath","//*[@class='qui_btn ww_btn ww_btn_Dropdown js_toggle_party_list']/span[1]")   #所属部门
 _loc_select_section=("xpath","//*[@onsubmit='return false']/div[3]/div[1]/div[1]/ul[1]/li[1]/a[1]")    #选择部门test
 _loc_confirm=("xpath",'//*[@class="qui_dialog_foot ww_dialog_foot"]/a[1]')    #确定
-_loc_depar=("xpath",'//*[@role="group"]/a[1]')   #部门列表
+_loc_depar=("xpath",'//*[@class="jstree jstree-1 jstree-default"]/ul[1]')   #部门列表
 
 
 
@@ -37,9 +37,10 @@ class ContactPage(Base):
 
     # 获取部门列表
     def get_list(self):
-        eles=self.findElement(_loc_depar)
+        eles= self.get_text(_loc_depar)
         department_list=[]
         for ele in eles:
             department_list.append(ele.text)
+        print(department_list)
         return department_list
 
